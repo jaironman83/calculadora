@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ID_PARRAFO_1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hola javascript</h1>
+    <p >soy un parrafo</p>
+    <p >soy un parrafo</p>
+    <p >soy un parrafo</p>
+    <p >soy un parrafo</p>
+    <p >soy un parrafo</p>
+    <p >soy un parrafo</p>
+    <p >soy un parrafo</p>
+    <p id="contenido">soy un parrafo</p>
+
+    <input type="button" onclick="subir()"> 
+    
+    <script type="text/javascript" >
+       // var tit = document.getElementById("parrafo");
+        var tit2 = document.getElementsByTagName("p");
+        var parrafo2 = tit2[1];
+        parrafo2.style.color = 'blue';
+
+        var parrafo3 = tit2[2];
+        parrafo3.style.backgroundColor = 'green';
+       // console.log(tit.innerText );
+        console.log(tit2 );
+
+        tit2[0].id='ID_PARRAFO_1';
+
+        var valor = 0;
+
+        function subir(){
+            valor += 1;
+            console.log(valor);
+            var con=document.getElementById("contenido")
+            con.innerHTML = valor;
+        }
+    </script>
+</body>
+</html>

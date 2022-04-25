@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class='enlace'>Hola mundo</h1>
+
+    <h1 class='pepito'>Hola mundo2</h1>
+
+    <script type="text/javascript" >
+      // una funcion una unica tarea
+      
+      // las variables que se crean en las funciones mueren en las funciones, 
+
+
+      // Cuando el mouse pasa por encima de algún elemento
+
+      // Definicion funciones
+      function nombreFuncion(){
+        console.log("hello funcion");
+      }
+
+      // funcion con parametro por defecto
+      function saludar (name = 'Pepito'){
+        console.log('Hola ' + name)
+      }
+
+      saludar();
+      saludar('rodolfo')
+      // ejecucion
+      nombreFuncion()
+
+
+      //deficionion suma
+      function suma(a,b){
+        console.log(a+b)
+      }
+
+      //funciones anonimas van directas a variables 
+
+      var sayHello = function(name = 'cualquiera'){
+          return `Hello ${name}`
+      }
+      console.log(sayHello())
+      console.log(sayHello('pantumflo'))
+      //uso de funcion
+      suma(2,3)
+
+      //funciones flecha arrow
+      const message = 'Text example'
+      var sayHello2 = (name) => `Hello ${name}`  
+      console.log(sayHello2('finidi'))
+
+      //arrow con body
+      var sayConBody = (name) => {return `Adios ${name}`}
+      console.log(sayConBody('eustaquio'))
+
+      // comparaciones == valor, === valor y tipo
+
+
+      // operadores ternarios
+      const gasto1 = 100;
+      const gasto2 = 50;
+      const gasto3 = 30;
+      const totalgastos = gasto1 + gasto2 + gasto3;
+      const presupuesto = 200;
+
+      const result  = presupuesto > totalgastos
+                    ? console.log('Hay pasta')
+                    : console.log('No hay pasta')
+      
+
+
+      // Objetos: colleccion de propiedades
+      var persona = {
+        nombre: 'juan',
+        apellido: 'perez',
+        edad: 40,
+        saludar: function() { 
+          console.log('hola');
+        }
+      }
+
+      function Persona(nombre, apellido, edad){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.apellido = apellido;
+
+        this.saluda = function(){
+          console.log('hola');
+        }
+      }
+
+      var persona2 = new Persona('jose','rodriguez',50);
+
+      var persona3 = new Object({
+        nombre: 'maria',
+        apellido: 'mendez',
+        edad:78,
+        saludar: function(){
+          console.log('hola');
+        }
+
+      });
+
+    </script>
+</body>
+</html>
